@@ -58,7 +58,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="video-background">
-            <video id="player" controls playsinline style="width: 100%; height: 100%; object-fit: cover;">
+            <video id="player" autoplay muted controls playsinline style="width: 100%; height: 100%; object-fit: cover;" oncanplay="this.muted=false">
               <source src="https://res.cloudinary.com/dvz42wlcy/video/upload/videoplayback_1_skzd69.mp4" type="video/mp4">
             </video>
         </div>
