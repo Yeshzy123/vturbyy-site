@@ -32,8 +32,9 @@ body {
 /* Color Palette Customizer */
 .color-palette {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
     z-index: 1000;
     transition: all 0.4s ease;
 }
