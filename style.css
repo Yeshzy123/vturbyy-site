@@ -31,10 +31,11 @@ body {
 
 /* Color Palette Customizer */
 .color-palette {
-    position: fixed;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
+    position: static;
+    width: 100%;
+    background: #0A2540;
+    padding: 20px;
+    margin: 0;
     z-index: 1000;
     transition: all 0.4s ease;
 }
@@ -46,16 +47,7 @@ body {
 }
 
 .palette-toggle {
-    width: 70px;
-    height: 70px;
-    background: var(--primary-color);
-    border-radius: 50% 0 0 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: -5px -5px 20px rgba(0,0,0,0.3);
-    margin-bottom: 0;
+    display: none;
 }
 
 .palette-toggle i {
@@ -64,37 +56,46 @@ body {
 }
 
 .palette-content {
-    width: 380px;
-    background: rgba(10, 37, 64, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 16px 0 0 0;
-    padding: 2.5rem;
-    box-shadow: -10px -10px 30px rgba(0,0,0,0.5);
-    transform: translateY(100%);
-    opacity: 0;
-    visibility: hidden;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: none;
+    border-radius: 0;
+    padding: 0;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
 }
 
 .palette-content h3 {
-    margin-bottom: 1.5rem;
+    margin: 0;
     font-weight: 700;
     font-size: 1.3rem;
+    color: white;
+    min-width: 120px;
 }
 
 .color-options {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin-bottom: 2rem;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    flex-wrap: wrap;
 }
 
 .color-option {
-    padding: 1rem;
-    border-radius: 8px;
+    padding: 8px 15px;
+    border-radius: 20px;
     cursor: pointer;
     text-align: center;
     transition: all 0.3s ease;
-    border: 2px solid transparent;
+    border: 2px solid white;
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.9rem;
 }
 
 .color-option:hover {
@@ -106,9 +107,8 @@ body {
     font-weight: 600;
 }
 
-.custom-colors h4 {
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
+.custom-colors {
+    display: none;
 }
 
 .color-inputs {
