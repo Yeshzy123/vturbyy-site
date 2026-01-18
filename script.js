@@ -236,3 +236,20 @@ function syncAudioVideo() {
 
 // Initialize sync when DOM is loaded
 document.addEventListener('DOMContentLoaded', syncAudioVideo);
+
+// Initialize Cloudinary Player
+const player = cloudinary.videoPlayer('player', {
+  cloudName: 'dvz42wlcy',
+  publicId: 'videoplayback_1_skzd69',
+  controls: true,
+  autoplay: true,
+  loop: true,
+  muted: false
+});
+
+// Handle audio unmute on user interaction
+document.addEventListener('click', function() {
+  if (player && player.muted()) {
+    player.unmute();
+  }
+});
